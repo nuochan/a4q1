@@ -7,12 +7,28 @@
 //
 
 #include <iostream>
+#include <iomanip>
+using namespace std;
 
-int main(int argc, const char * argv[])
+int main()
 {
-
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    const int size = 10;
+    int inputArray[size] = {0};
+    string outputArray = {0};
+    
+    cout << "input 10 numbers: ";
+    for(int i = 0; i < size; i++){
+        cin >> inputArray[i];
+    }
+    cin.sync();
+    
+    for(int i = 0; i < size; i++){
+        for(int j = 0; j < size; j++){
+            if(inputArray[i] != outputArray[j]){
+                outputArray[i] = inputArray[i];
+            }
+        }
+    }
+    
     return 0;
 }
-
